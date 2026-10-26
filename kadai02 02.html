@@ -40,10 +40,11 @@
 <body>
     <div id="hub">
         <select id="animationSelect">
-            <option value="Attack" selected>攻撃</option>
+            <option value="Attack" >攻撃</option>
             <option value="Death">倒れる</option>
             <option value="Eating">食べる</option>
-            <option value="Jump_Toldle">ジャンプ</option>
+            <option value="Gallop">走る</option>
+            <option value="Walk" selected>歩く</option>
         </select>
         <button id="enlargeButton">拡大</button>
         <button id="rotateButton">回転</button>
@@ -110,7 +111,7 @@
             model.setAttribute("rotation",`0 0 ${angle}`);
         }
 
-        rotateButton02.addEventListener("click",`0 0 ${angle}`);
+        rotateButton02.addEventListener("click",rotateModel02);
 
         function changeAnimation(){
             ookami.setAttribute("animation-mixer","clip",animationSelect.value);
